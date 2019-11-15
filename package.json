@@ -11,7 +11,7 @@
     "lint": "xo",
     "lint:fix": "npm run lint --fix",
     "test": "jest",
-    "test:tdd": "npm t --watch"
+    "test:tdd": "npm t -- --watchAll"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,6 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.4",
     "ts-jest": "^24.1.0",
-    "tsc": "^1.20150623.0",
     "typescript": "^3.7.2",
     "xo": "^0.25.3"
   },

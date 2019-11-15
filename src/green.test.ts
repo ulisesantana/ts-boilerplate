@@ -1,5 +1,5 @@
 describe('Basic tests', () => {
 	it('Always green', () => {
-		expect(true).toBe(false);
+		expect(true).toBe(true);
 	});
 });
