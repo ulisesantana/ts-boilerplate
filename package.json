@@ -1,0 +1,74 @@
+{
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "description": "TypeScript boilerplate",
+  "main": "build/index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node build/index.js",
+    "dev": "npm run build -- --watch & nodemon build/index.js",
+    "build": "npm run lint && tsc",
+    "lint": "xo",
+    "lint:fix": "npm run lint --fix",
+    "test": "jest",
+    "test:tdd": "npm t --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulisesantana/ts-boilerplate.git"
+  },
+  "keywords": [
+    "typescript",
+    "tdd",
+    "test",
+    "boilerplate",
+    "jest",
+    "xo"
+  ],
+  "author": "Ulises Santana <ulisesantana@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ulisesantana/ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ulisesantana/ts-boilerplate#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint-config-xo-typescript": "^0.21.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "ts-jest": "^24.1.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.7.2",
+    "xo": "^0.25.3"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.+(ts|js)",
+      "**/?(*.)+(spec|test).+(ts|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts)?$": "ts-jest"
+    }
+  },
+  "xo": {
+    "ignores": [
+      "build"
+    ],
+    "globals": [
+      "describe",
+      "xdescribe",
+      "it",
+      "xit",
+      "expect"
+    ],
+    "extends": "xo-typescript",
+    "extensions": [
+      "ts"
+    ]
+  }
+}
