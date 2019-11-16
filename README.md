@@ -14,3 +14,43 @@ This is a template repository. So just use the template and once you have your r
 "test": "jest",
 "test:tdd": "npm t --watch"
 ```
+
+## Test config
+
+```
+"jest": {
+  "roots": [
+    "<rootDir>/src"
+ ],
+ "testMatch": [
+    "**/__tests__/**/*.+(ts|js)",
+    "**/?(*.)+(spec|test).+(ts|js)"
+ ],
+ "transform": {
+    "^.+\\.(ts)?$": "ts-jest"
+ }
+}
+
+```
+
+## Linter config
+
+```
+"xo": {
+  "ignores": [
+    "build"
+  ],
+  "globals": [
+    "describe",
+    "xdescribe",
+    "it",
+    "xit",
+    "expect"
+  ],
+  "extends": "xo-typescript",
+  "extensions": [ 
+    "ts"
+  ]
+}
+
+```
