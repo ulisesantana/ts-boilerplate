@@ -9,7 +9,7 @@
     "dev": "npm run build -- --watch & nodemon build/index.js",
     "build": "npm run lint && tsc",
     "lint": "xo",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:tdd": "npm t -- --watchAll"
   },
