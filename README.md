@@ -10,9 +10,9 @@ This is a template repository. So just use the template and once you have your r
 "dev": "npm run build -- --watch & nodemon build/index.js",
 "build": "npm run lint && tsc",
 "lint": "xo",
-"lint:fix": "npm run lint --fix",
+"lint:fix": "npm run lint -- --fix",
 "test": "jest",
-"test:tdd": "npm t --watch"
+"test:tdd": "npm t -- --watch"
 ```
 
 ## Test config
