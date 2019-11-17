@@ -55,6 +55,7 @@
     }
   },
   "xo": {
+    "prettier": true,
     "ignores": [
       "build"
     ],
