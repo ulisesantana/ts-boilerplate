@@ -37,6 +37,7 @@ This is a template repository. So just use the template and once you have your r
 
 ```
 "xo": {
+  "prettier": true
   "ignores": [
     "build"
   ],
