@@ -8,7 +8,7 @@
     "start": "node build/index.js",
     "dev": "npm run build -- --watch & nodemon build/index.js",
     "build": "npm run lint && tsc",
-    "lint": "xo",
+    "lint": "./node_modules/.bin/eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:tdd": "npm t -- --watchAll"
@@ -23,7 +23,7 @@
     "test",
     "boilerplate",
     "jest",
-    "xo"
+    "eslint"
   ],
   "author": "Ulises Santana <ulisesantana@gmail.com>",
   "license": "MIT",
@@ -32,15 +32,24 @@
   },
   "homepage": "https://github.com/ulisesantana/ts-boilerplate#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.23",
-    "@typescript-eslint/eslint-plugin": "^2.7.0",
-    "@typescript-eslint/parser": "^2.7.0",
-    "eslint-config-xo-typescript": "^0.21.0",
-    "jest": "^24.9.0",
-    "nodemon": "^1.19.4",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.7.2",
-    "xo": "^0.25.3"
+    "@types/jest": "^26.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7",
+    "nodemon": "^1.19.4"
   },
   "jest": {
     "roots": [
@@ -53,22 +62,5 @@
     "transform": {
       "^.+\\.(ts)?$": "ts-jest"
     }
-  },
-  "xo": {
-    "prettier": true,
-    "ignores": [
-      "build"
-    ],
-    "globals": [
-      "describe",
-      "xdescribe",
-      "it",
-      "xit",
-      "expect"
-    ],
-    "extends": "xo-typescript",
-    "extensions": [
-      "ts"
-    ]
   }
 }
