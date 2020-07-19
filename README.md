@@ -9,7 +9,7 @@ This is a template repository. So just use the template and once you have your r
 "start": "node build/index.js",
 "dev": "npm run build -- --watch & nodemon build/index.js",
 "build": "npm run lint && tsc",
-"lint": "xo",
+"lint": "./node_modules/.bin/eslint . --ext .ts",
 "lint:fix": "npm run lint -- --fix",
 "test": "jest",
 "test:tdd": "npm t -- --watch"
@@ -17,8 +17,8 @@ This is a template repository. So just use the template and once you have your r
 
 ## Test config
 
-```
-"jest": {
+```javascript
+{
   "roots": [
     "<rootDir>/src"
  ],
@@ -30,28 +30,30 @@ This is a template repository. So just use the template and once you have your r
     "^.+\\.(ts)?$": "ts-jest"
  }
 }
-
 ```
 
 ## Linter config
 
-```
-"xo": {
-  "prettier": true
-  "ignores": [
-    "build"
+```javascript
+{
+  env: {
+    browser: true,
+    es2020: true,
+    node: true,
+    jest: true,
+  },
+  extends: [
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
   ],
-  "globals": [
-    "describe",
-    "xdescribe",
-    "it",
-    "xit",
-    "expect"
-  ],
-  "extends": "xo-typescript",
-  "extensions": [ 
-    "ts"
-  ]
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 11,
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "prettier"],
+  rules: {},
 }
-
 ```
