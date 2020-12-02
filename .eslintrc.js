@@ -7,7 +7,8 @@ module.exports = {
   },
   extends: [
     'standard-with-typescript',
-    'standard-jsx'
+    'standard-jsx',
+    'prettier-standard'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,6 +16,9 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  plugins: ['@typescript-eslint', 'prettier'],
-  rules: {}
+  plugins: ['@typescript-eslint'],
+  rules: {
+    // disabled due to conflict with prettier-standard
+    '@typescript-eslint/space-before-function-paren': 'off'
+  }
 }
