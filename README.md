@@ -5,14 +5,15 @@ This is a template repository. So just use the template and once you have your r
 ## Scripts
 
 ```javascript
+"prepare": "npm run build",
 "prestart": "npm run build",
 "start": "node build/index.js",
 "dev": "npm run build -- --watch & nodemon build/index.js",
-"build": "npm run lint && tsc",
+"build": "npm run lint && npm test && tsc",
 "lint": "./node_modules/.bin/eslint . --ext .ts",
 "lint:fix": "npm run lint -- --fix",
-"test": "jest",
-"test:tdd": "npm t -- --watch"
+"test": "jest --verbose",
+"test:tdd": "npm t -- --watchAll"
 ```
 
 ## Test config
@@ -36,24 +37,27 @@ This is a template repository. So just use the template and once you have your r
 
 ```javascript
 {
-  env: {
+   env: {
     browser: true,
     es2020: true,
     node: true,
-    jest: true,
+    jest: true
   },
   extends: [
-    "standard",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
+    'standard-with-typescript',
+    'standard-jsx',
+    'prettier-standard'
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 11,
-    sourceType: "module",
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
-  plugins: ["@typescript-eslint", "prettier"],
-  rules: {},
+  plugins: ['@typescript-eslint'],
+  rules: {
+    // disabled due to conflict with prettier-standard
+    '@typescript-eslint/space-before-function-paren': 'off'
+  }
 }
 ```
