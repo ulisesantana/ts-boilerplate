@@ -15,7 +15,7 @@
     "build": "npm run lint && npm test && tsc",
     "lint": "./node_modules/.bin/eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:tdd": "npm t -- --watchAll"
   },
   "repository": {
