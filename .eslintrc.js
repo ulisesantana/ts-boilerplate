@@ -3,19 +3,18 @@ module.exports = {
     browser: true,
     es2020: true,
     node: true,
-    jest: true,
+    jest: true
   },
   extends: [
-    "standard",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
+    'standard-with-typescript',
+    'standard-jsx'
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 11,
-    sourceType: "module",
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
-  plugins: ["@typescript-eslint", "prettier"],
-  rules: {},
-};
+  plugins: ['@typescript-eslint', 'prettier'],
+  rules: {}
+}
