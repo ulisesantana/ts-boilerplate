@@ -10,7 +10,7 @@ This is a template repository. So just use the template and once you have your r
 "start": "node build/index.js",
 "dev": "npm run build -- --watch & nodemon build/index.js",
 "build": "npm run lint && npm test && tsc",
-"lint": "./node_modules/.bin/eslint . --ext .ts",
+"lint": "eslint . --ext .ts",
 "lint:fix": "npm run lint -- --fix",
 "test": "jest --verbose",
 "test:tdd": "npm t -- --watchAll"
@@ -35,25 +35,25 @@ This is a template repository. So just use the template and once you have your r
 
 ## Linter config
 
-```javascript
-module.exports = {
-    env: {
-        es2021: true,
-        node: true,
-        jest: true
+```json
+{
+    "env": {
+        "es2021": true,
+        "node": true,
+        "jest": true
     },
-    extends: [
-        'standard-with-typescript'
+    "extends": [
+        "standard"
     ],
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaVersion: 12,
-        sourceType: 'module',
-        project: './tsconfig.json'
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
     },
-    plugins: [
-        '@typescript-eslint'
+    "plugins": [
+        "@typescript-eslint"
     ],
-    rules: {}
+    "rules": {
+    }
 }
 ```
