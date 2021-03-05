@@ -4,7 +4,7 @@ This is a template repository. So just use the template and once you have your r
 
 ## Scripts
 
-```javascript
+```json
 "prepare": "npm run build",
 "prestart": "npm run build",
 "start": "node build/index.js",
@@ -13,23 +13,24 @@ This is a template repository. So just use the template and once you have your r
 "lint": "eslint . --ext .ts",
 "lint:fix": "npm run lint -- --fix",
 "test": "jest --verbose",
-"test:tdd": "npm t -- --watchAll"
+"test:watch": "npm t -- --watchAll",
+"test:coverage": "npm t -- --coverage"
 ```
 
 ## Test config
 
-```javascript
+```json
 {
   "roots": [
     "<rootDir>/src"
- ],
- "testMatch": [
-    "**/__tests__/**/*.+(ts|js)",
+  ],
+  "testMatch": [
+    "**/__tests__/**/*.+(ts|js)", 
     "**/?(*.)+(spec|test).+(ts|js)"
- ],
- "transform": {
+  ],
+  "transform": {
     "^.+\\.(ts)?$": "ts-jest"
- }
+  }
 }
 ```
 

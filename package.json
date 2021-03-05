@@ -16,7 +16,8 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --verbose",
-    "test:tdd": "npm t -- --watchAll"
+    "test:watch": "npm t -- --watchAll",
+    "test:coverage": "npm t -- --coverage"
   },
   "repository": {
     "type": "git",
