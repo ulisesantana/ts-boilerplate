@@ -8,7 +8,6 @@ This is a template repository. So just use the template and once you have your r
 "prepare": "npm run build",
 "prestart": "npm run build",
 "start": "node build/index.js",
-"dev": "npm run build -- --watch & nodemon build/index.js",
 "build": "npm run lint && npm test && tsc",
 "lint": "eslint . --ext .ts",
 "lint:fix": "npm run lint -- --fix",
@@ -39,7 +38,7 @@ This is a template repository. So just use the template and once you have your r
 ```json
 {
     "env": {
-        "es2021": true,
+        "es2022": true,
         "node": true,
         "jest": true
     },
