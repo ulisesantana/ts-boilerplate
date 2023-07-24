@@ -83,7 +83,7 @@ This template come with a handful list of scripts:
 - `"lint"`: Run eslint following [standard rules](https://standardjs.com/rules.html).
 - `"lint:fix"`: Fix all simple fixes as spaces, quotes and stuff like that.
 - `"prestart"`: Trigger build every time you run `npm start`. 
-- ️`"start"`: Run `build/index.js`. A build is generated right before running triggered by `"prestart" script.`". 
+- ️`"start"`: Run `build/index.js`. A build is generated right before running triggered by `"prestart"` script.. 
 - ️`"test"`: Run all test in `src` with [vitest](https://vitest.dev). 
 - ️`"test:coverage"`: Run test coverage. 
 - ️`"test:watch"`: Run all test in `src` and keep watching for file changes. 
