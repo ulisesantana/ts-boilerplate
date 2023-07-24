@@ -49,6 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About the template
 <div id="about-the-template" name="about-the-template"></div>
+
 This is a template repository focused for practicing [katas](https://kata-log.rocks). Has the basics for start working with TDD.
 
 You can also use this template for practicing some [design patterns](https://refactoring.guru/design-patterns) or just as a sandbox for testing an idea.
