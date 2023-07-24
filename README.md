@@ -89,7 +89,7 @@ This template come with a handful list of scripts:
 - ️`"test:watch"`: Run all test in `src` and keep watching for file changes. 
 - ️`"test:watch:ui"`: Same as `"test:watch"`, but run a web server for checking test results on a browser.
 
-The idea is to use mostly the scripts starting with `test`. You can use the `lint` scripts or lets your IDE uses the `.eslintrc.json` config.
+The idea is to use mostly the scripts starting with `test`. You can use the `lint` scripts or let your IDE use the `.eslintrc.json` config.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
