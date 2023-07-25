@@ -60,6 +60,7 @@ You can also use this template for practicing some [design patterns](https://ref
 <div id="built-with" name="built-with"></div>
 
 * [![ESLint][ESLint]][ESLint-url]
+* [![Node.js][Node.js]][Node.js-url]
 * [![TypeScript][TypeScript]][TypeScript-url]
 * [![Vitest][Vitest]][Vitest-url]
 
@@ -72,6 +73,11 @@ You can also use this template for practicing some [design patterns](https://ref
 <div id="getting-started" name="getting-started"></div>
 
 Create your new repository using this as template and once you have your repository cloned on your pc just run `npm install` on the repository root folder for installing all the dependencies.
+
+```bash
+# Run it on the repository root folder
+npm install
+```
 
 
 <!-- USAGE EXAMPLES -->
@@ -119,4 +125,6 @@ The idea is to use mostly the scripts starting with `test`. You can use the `lin
 [Vitest-url]: https://vitest.dev
 [ESLint]: https://img.shields.io/badge/eslint-341BAB?style=for-the-badge&logo=eslint&logoColor=white
 [ESLint-url]: https://eslint.org
+[Node.js]: https://img.shields.io/badge/node.js-black?style=for-the-badge&logo=nodedotjs
+[Node.js-url]: https://nodejs.org
 
