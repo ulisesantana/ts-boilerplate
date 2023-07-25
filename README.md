@@ -71,12 +71,16 @@ You can also use this template for practicing some [design patterns](https://ref
 ## Getting Started
 <div id="getting-started" name="getting-started"></div>
 
-Create your new repository using this as template and once you have your repository cloned on your pc just run `npm install` for installing all the dependencies.
+Create your new repository using this as template and once you have your repository cloned on your pc just run `npm install` on the repository root folder for installing all the dependencies.
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 <div id="usage" name="usage"></div>
+
+```bash
+npm run test:watch
+```
 
 This template come with a handful list of scripts:
 - `"build"`: build the project using TypeScript. The output directory is `/build`.
