@@ -13,9 +13,9 @@
     "lint:fix": "npm run lint -- --fix",
     "prestart": "npm run build",
     "start": "node build/index.js",
-    "test": "vitest run src",
+    "test": "vitest run",
     "test:coverage": "npm run test -- --coverage",
-    "test:watch": "vitest watch src",
+    "test:watch": "vitest watch",
     "test:watch:ui": "npm run test:watch -- --ui"
   },
   "repository": {
