@@ -23,7 +23,11 @@
     "url": "git+https://github.com/ulisesantana/ts-boilerplate.git"
   },
   "keywords": [],
-  "author": "Ulises Santana <ulisesantana@gmail.com>",
+  "author": {
+    "name": "Ulises Santana",
+    "email": "ulisesantana@gmail.com",
+    "url": "https://ulisesantana.dev"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ulisesantana/ts-boilerplate/issues"
